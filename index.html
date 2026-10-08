@@ -430,6 +430,11 @@ p,.lead,li{word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}.lead-l
 /* Flow connections and position/cash experiment. */
 .chapter-bridge,.risk-link,.rule-context{padding:24px;margin:32px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.chapter-bridge{border-left:4px solid var(--teal)}.chapter-bridge p{margin:0 0 12px}.chapter-bridge a,.risk-link a{font-weight:700;text-underline-offset:5px}.rule-context textarea{width:100%;font:inherit;line-height:1.8;min-height:90px}.rule-context label{display:block;margin:20px 0}.book-purpose{max-width:70ch;color:var(--muted);margin:30px 0}.position-actions{display:flex;flex-wrap:wrap;gap:8px;grid-column:1/-1}.position-actions button{min-height:44px;font:inherit;font-size:14px}.position-actions button:disabled{opacity:.45;cursor:default}.position-price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:20px 0}.position-price strong{font-size:2rem;color:var(--accent)}.position-price small{color:var(--muted)}.position-cash{display:flex;min-height:42px;border-radius:8px;overflow:hidden;background:var(--bg);margin:16px 0}.position-cash span{display:flex;align-items:center;justify-content:center;font-size:13px;min-width:0;overflow:hidden;white-space:nowrap;background:var(--soft);color:var(--ink);transition:width .35s}.position-cash span+span{background:var(--accent);color:#fff}@media(max-width:600px){.chapter-bridge,.risk-link,.rule-context{padding:18px}.position-price{gap:8px}.position-price span{flex-basis:100%}.position-actions button{flex:1 1 130px}.position-cash span{font-size:12px}}
 #position .metrics{grid-template-columns:repeat(3,minmax(0,1fr))}#position .metric strong{word-break:keep-all;overflow-wrap:normal}@media(max-width:600px){#position .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}#position .metric strong{font-size:1.1rem}}
+
+/* Small additions to the existing learning flow. */
+.enrich-connection{border-left:3px solid var(--teal);padding:12px 18px;color:var(--muted);font-size:15px}.enrich-state{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin:18px 0;font-size:14px}.enrich-state b{color:var(--teal)}.candle-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:12px;align-items:center}.candle-glyph{width:100%;display:block;max-height:280px}.candle-glyph text{fill:var(--muted);font:16px "Noto Sans KR",sans-serif}.enrich-actions{display:flex;gap:8px;flex-wrap:wrap;grid-column:1/-1}.enrich-actions button{min-height:44px}.wait-row{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;margin:10px 0;font-size:12px}.wait-row>div{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px}.wait-row span{text-align:center;border-radius:5px;padding:6px 0}.wait-row .under{background:var(--soft);color:var(--accent);border:1px solid var(--accent)}.wait-row .above{background:var(--paper);color:var(--teal);border:1px solid var(--teal)}.wait-row .unseen{background:var(--bg);color:var(--muted);border:1px dashed var(--line)}.budget-bars>div{display:grid;grid-template-columns:135px 1fr 115px;gap:12px;align-items:center;position:relative;margin:20px 0;font-size:13px}.budget-bars i{display:block;background:var(--blue);height:12px;border-radius:4px;min-width:0;transition:width .25s}.budget-bars>div:nth-child(2) i{background:var(--teal)}.budget-bars>div:nth-child(3) i{background:var(--accent)}.budget-bars b{text-align:right;font-variant-numeric:tabular-nums}.balance-bar{display:flex;min-height:48px;border-radius:8px;overflow:hidden;margin:20px 0}.balance-bar span{display:flex;align-items:center;justify-content:center;background:var(--blue);color:var(--paper);font-size:14px;transition:width .35s}.balance-bar span+span{background:var(--teal)}.enrich-review{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:24px 0;padding:24px}.enrich-review label{display:block;margin:18px 0;font-size:14px}.enrich-review textarea{display:block;margin-top:8px;line-height:1.8}.enrich-review p{font-size:15px}#wait .metric strong,#budget .metric strong,#balance .metric strong,#checkpoint .metric strong{font-size:1.2rem;word-break:keep-all;overflow-wrap:anywhere}#candle .metric strong{font-size:1.4rem}
+@media(max-width:600px){.candle-layout{grid-template-columns:1fr}.candle-glyph{height:210px}.wait-row{grid-template-columns:1fr;gap:4px}.wait-row>div{gap:3px}.wait-row span{font-size:11px}.budget-bars>div{grid-template-columns:1fr 1fr;gap:5px}.budget-bars i{grid-row:2;grid-column:1/-1}.budget-bars b{grid-row:1;grid-column:2}.enrich-actions button{flex:1 1 125px;font-size:13px}.enrich-review{padding:18px}.enrich-state{font-size:13px}.balance-bar span{font-size:12px}#candle .metrics,#wait .metrics,#budget .metrics,#balance .metrics,#checkpoint .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}#candle .metric strong{font-size:1.2rem}#wait .metric strong,#budget .metric strong,#balance .metric strong,#checkpoint .metric strong{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.budget-bars i,.balance-bar span{transition:none}}
 </style></head><body><a class="skip" href="#main">본문으로 이동</a><header><button id="menu" aria-label="챕터 목록" aria-expanded="false">☰</button><a class="brand" href="#home"><span class="logo">Q</span>퀀트 투자의 기본 <small>by DP chips</small></a><span class="header-note">읽고, 바꾸고, 확인하기</span><button id="theme" aria-label="어두운 테마로 전환">◐</button></header><aside id="sidebar"><p class="eyebrow">THE INTERACTIVE BOOK</p><nav id="nav" aria-label="챕터"></nav><div class="side-note"><b id="progress">읽은 장 0 / 11</b><br>천천히, 한 개념씩 이해하기.</div></aside><main id="main" tabindex="-1"></main><dialog id="commandments" aria-labelledby="commandments-title"><div class="scripture"><button class="scripture-close" id="commandments-close" aria-label="8계명 닫기">×</button><div class="scripture-heading"><span class="scripture-seal" aria-hidden="true">DP</span><p class="scripture-kicker">DP CHIPS · THE CREED</p><h2 id="commandments-title">투자의 8계명</h2><p class="scripture-subtitle">퀀트 투자의 기본</p></div><ol class="commandment-list"><li><span>제1계</span><p><span class="creed-line">계획된 손절은</span> <span class="creed-line">잠재적 수익이다.</span></p></li><li><span>제2계</span><p>국장은 하지 않는다.</p></li><li><span>제3계</span><p><span class="creed-line">피치 못할 사정으로</span> <span class="creed-line">국장을 한다면</span> <span class="creed-line">ISA로 한다.</span></p></li><li><span>제4계</span><p><span class="creed-line">200일선 아래인 것들은</span> <span class="creed-line">쳐다도 보지 말아라.</span></p></li><li><span>제5계</span><p><strong>We are machine.</strong><br>너의 MBTI는 TTTT다.</p></li><li><span>제6계</span><p><span class="creed-line">사는 건 기술이고</span> <span class="creed-line">파는 건 예술이다.</span></p></li><li><span>제7계</span><p><span class="creed-line">돈은 시장이</span> <span class="creed-line">벌게 해 주는 것이다.</span><br>정성을 다하라.</p></li><li class="amen"><span>제8계</span><p>“속멘”</p></li></ol><div class="scripture-footer"><span aria-hidden="true">✦</span><button id="commandments-confirm">마음에 새기고 공부하기</button><button id="commandments-today" class="scripture-today">오늘 그만 보기</button></div></div></dialog><script>try{if(localStorage.getItem('soxl-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script><script>/* Educational indicator models. */
 (function(root){
 const clamp=(v,l,h)=>Math.min(h,Math.max(l,v));
@@ -728,5 +733,93 @@ for(const [route,[next,text]] of Object.entries(chapterConnections)){
  const original=pages[route];
  pages[route]=()=>original()+`<aside class="chapter-bridge"><p class="eyebrow">다음으로 이어 보기</p><p>${text}</p><a href="#${next}">${chapters.find(c=>c[0]===next)[1]} <span aria-hidden="true">→</span></a></aside>`;
 }
+render();
+</script><script>'use strict';
+// Supplemental lessons: preserve the original chapters, essays and experiments.
+const enrichBefore=(html,needle,addition)=>html.includes(needle)?html.replace(needle,addition+needle):html+addition;
+const enrichActions=(buttons)=>`<div class="enrich-actions">${buttons}</div>`;
+const enrichSource=(href,label)=>`<p class="caption">개념 참고: <a href="${href}" target="_blank" rel="noopener">${label}</a></p>`;
+const enrichData=pages.data;
+pages.data=()=>enrichBefore(enrichData(),'<section class="lab" id="timing">',
+ section('하루의 움직임을 캔들 하나에 담기','시가는 출발 가격, 고가와 저가는 그동안 가장 높고 낮았던 가격입니다. 마지막 가격이 확정되면 종가가 됩니다. 캔들의 몸통은 시가와 종가 사이, 꼬리는 고가와 저가까지의 범위를 보여 줍니다. 장중에는 몸통과 꼬리가 계속 바뀔 수 있습니다.')+
+ lab('candle','움직이는 가격이 캔들이 되는 순간',select('candle-case','하루의 모습',[['up','시가보다 높게 마감'],['down','시가보다 낮게 마감'],['gap','전일보다 올랐지만 음봉'],['flat','시가와 종가가 같은 날']])+range('candle-step','하루를 따라가기',0,5,0,1,'장면')+playControls('candle-step'),'가상의 하루를 여섯 장면으로 나눴습니다. 이 체험은 종가가 시가보다 높으면 상승색, 낮으면 하락색으로 표시합니다. 서비스마다 색상 설정은 다를 수 있습니다. 장중에는 현재가로 몸통을 그리며 마지막 장면에서만 종가가 확정됩니다.')+
+ `<p class="enrich-connection">종가 기준 규칙도 같은 원리입니다. 장중에 보이는 캔들과 하루가 끝난 캔들은 다를 수 있습니다. 다음 장의 LOC·MOC와 연결해서 생각해 보세요.</p>`);
+const enrichDataInit=inits.data;
+inits.data=()=>{
+ enrichDataInit();
+ const candlePaths={up:[100,97,105,102,110,106],down:[100,104,98,95,101,96],gap:[110,113,108,107,111,108],flat:[100,103,98,101,99,100]};
+ let previousCase=opts('candle-case');
+ bind(['candle-case','candle-step'],()=>{
+  if(previousCase!==opts('candle-case')){previousCase=opts('candle-case');$('#candle-step').value=0;$('#candle-step-out').textContent='0장면'}
+  const path=candlePaths[previousCase],step=val('candle-step'),prices=path.slice(0,step+1),open=path[0],high=Math.max(...prices),low=Math.min(...prices),last=prices.at(-1),done=step===5;
+  const color=last>open?'var(--accent)':last<open?'var(--blue)':'var(--muted)',y=v=>25+(116-v)*230/24;
+  const glyph=`<svg class="candle-glyph" viewBox="0 0 300 300" role="img" aria-label="${done?'확정':'진행 중인'} 캔들. 시가 ${open}, 고가 ${high}, 저가 ${low}, ${done?'종가':'현재가'} ${last}"><title>몸통과 꼬리로 요약한 가격</title><line x1="115" x2="115" y1="${y(high)}" y2="${y(low)}" stroke="${color}" stroke-width="4"/><rect x="88" width="54" y="${Math.min(y(open),y(last))}" height="${Math.max(2,Math.abs(y(open)-y(last)))}" fill="${color}" rx="2"/><text x="162" y="${y(high)-8}">고가 ${high}</text><text x="162" y="${y(low)+25}">저가 ${low}</text><text x="115" y="285" text-anchor="middle">${done?'확정된 캔들':'만들어지는 캔들'}</text></svg>`;
+  put('candle',`<div class="enrich-state"><span>${['개장','오전','점심 무렵','오후','마감 직전','장 마감'][step]}</span><b>${done?'종가 확정':'아직 장중'}</b></div><div class="candle-layout"><div>${chart([{name:'지금까지의 가격',values:prices,color:'var(--teal)',dots:true},{name:'전일 종가',values:Array(step+1).fill(100),color:'var(--muted)',dash:true}],{min:92,max:116,height:220,title:'하루의 가격 경로',labels:['개장','오전','점심','오후','마감 직전','마감']})}</div><div>${glyph}</div></div>`+metrics(metric('시가 · 출발',num(open,0)),metric('고가 / 저가',high+' / '+low),metric(done?'종가 · 마감':'현재가 · 종가 미확정',num(last,0)))+`<div class="result">${done?(last>open?'양봉 · 시가보다 높게 마감했습니다.':last<open?'음봉 · 시가보다 낮게 마감했습니다.':'시가와 종가가 같아 몸통이 선처럼 보입니다.'):'아직 최종 종가는 모릅니다. 현재가가 바뀌면 몸통도 달라집니다.'} ${previousCase==='gap'&&done?'하지만 전일 종가 100보다는 높습니다. 음봉인지와 전일 대비 하락했는지는 서로 다른 질문입니다.':''}</div>`);
+ });
+ initPlayback('candle-step',5);
+};
+const enrichRisk=topicPages.risk;
+topicPages.risk=()=>enrichBefore(enrichRisk(),'<div class="takeaway">',
+ section('얼마나 깊었는지, 얼마나 오래였는지','MDD는 가장 깊게 내려간 정도를 알려 줍니다. 하지만 그 상태에서 얼마나 기다렸는지는 따로 봐야 합니다. 아래 두 계좌는 같은 고점과 저점, 같은 마지막 금액을 가집니다. 시간을 움직이며 어느 쪽을 유지하기 더 힘들지 생각해 보세요.')+
+ lab('wait','같이 떨어졌는데, 기다림은 다르다',range('wait-step','살펴볼 월말',0,12,12,1,'개월')+playControls('wait-step'),'시작값 100, 이후 고점 110과 저점 77을 공유하는 가상 월말 경로입니다. 고점→회복 시간은 이전 고점을 기록한 월말부터 그 고점 이상으로 돌아온 첫 월말까지 셉니다. 월중 움직임·입출금·비용은 생략합니다. 두 경로를 견딘다고 실제 투자도 회복한다는 뜻은 아닙니다.')+
+ `<p class="enrich-connection">“손실을 감당한다”에는 돈의 크기뿐 아니라 기다리는 시간도 들어갑니다. 8장에서는 이 기다림 속에서 무엇을 점검할지 이어서 살펴봅니다.</p>`);
+const enrichRiskInit=inits.risk;
+inits.risk=()=>{
+ enrichRiskInit();
+ bind(['wait-step'],()=>{
+  const fast=[100,110,77,92,110,112,113,114,116,117,118,119,120],slow=[100,110,77,80,82,84,86,88,92,100,110,115,120],n=val('wait-step');
+  const recovery=a=>{const i=a.findIndex((v,i)=>i>1&&i<=n&&v>=110);return i<0?'아직 회복 전':(i-1)+'개월'};
+  const row=(a,label)=>`<div class="wait-row"><b>${label}</b><div>${a.slice(1).map((v,i)=>`<span class="${i+1>n?'unseen':v<110?'under':'above'}" title="${i+1}개월: ${v}">${i+1}</span>`).join('')}</div></div>`;
+  put('wait',chart([{name:'먼저 회복',values:fast.slice(0,n+1),color:'var(--teal)',dots:true},{name:'오래 기다림',values:slow.slice(0,n+1),color:'var(--accent)',dots:true},{name:'이전 고점 110',values:Array(n+1).fill(110),color:'var(--muted)',dash:true}],{min:70,max:125,labels:['출발',...Array.from({length:12},(_,i)=>(i+1)+'개월')],title:'낙폭의 깊이는 같고 회복 시간은 다른 두 경로'})+metrics(metric('지금까지의 MDD · 두 경로',pct(Math.min(...drawdown(fast.slice(0,n+1))))),metric('먼저 회복 · 고점→회복',n<1?'고점 기록 전':recovery(fast)),metric('오래 기다림 · 고점→회복',n<1?'고점 기록 전':recovery(slow)))+`<div class="wait-calendar">${row(fast,'먼저 회복')}${row(slow,'오래 기다림')}<p class="caption">색칠한 칸은 관측한 월말입니다. 분홍 칸은 이전 고점 110 아래, 초록 칸은 고점 이상입니다. 회색 칸은 아직 보지 않은 시간입니다.</p></div><div class="result">${n<2?'앞으로 얼마나 떨어지고 언제 돌아올지는 아직 이 장면만으로 알 수 없습니다.':n<10?'같은 깊이의 손실이라도 회복을 기다리는 경험은 다릅니다. 마지막 결과만 보면 이 기다림이 숨겨집니다.':'두 경로는 같은 마지막 금액을 향하지만, 이전 고점으로 돌아온 시점은 다릅니다. 실제 시장에는 회복하지 못하는 경로도 있습니다.'}</div>`);
+ });
+ initPlayback('wait-step',12);
+};
+const enrichSizing=topicPages.sizing;
+topicPages.sizing=()=>enrichBefore(enrichSizing(),'<h2>티어 · 나눠 담기와 분산은 다릅니다</h2>',
+ section('얼마를 사는지와 얼마를 잃을 수 있는지','투입금은 자산을 사는 데 쓴 돈입니다. 계획한 손실은 정해 둔 청산 가격에 팔렸다고 가정했을 때 줄어드는 돈입니다. 같은 투입금이라도 청산 가격을 얼마나 멀리 두는지에 따라 계획한 손실이 달라집니다. 앞의 비중 체험과 함께 비교해 보세요.')+
+ lab('budget','투입금과 계획한 손실을 나란히 보기',range('budget-weight','계좌에서 투자하는 비중',0,100,20,1,'%')+range('budget-stop','매수가 대비 청산 기준의 하락폭',1,50,10,1,'%')+range('budget-slip','실제 체결 시 추가 하락폭',0,20,0,1,'%p'),'앞의 “내 계좌 시작 금액”을 함께 사용합니다. 한 번의 매수와 전량 매도, 차입 없는 현금 계좌를 가정합니다. 계획 가격보다 더 낮게 체결되는 경우를 추가 하락폭으로 표현합니다. 비용·세금·환율은 생략하며 입력값은 권장 기준이 아닙니다.')+
+ formula('계획한 손실 = 투입금 × 청산 기준의 하락률')+
+ `<p class="caption">손실 조건은 정확한 체결 가격이나 최대 손실을 보장하지 않습니다. 갭 하락이나 주문 지연이 있으면 계획보다 더 잃을 수 있습니다.</p>`+
+ enrichSource('https://www.cmegroup.com/education/courses/trade-and-risk-management/proper-position-size','CME · 투자 규모와 거래 위험')
+ )+section('가격이 바뀌면 비중도 바뀝니다','처음에 정한 주식·현금 비중도 가격이 움직이면 달라집니다. 리밸런싱은 바뀐 비중을 목표 비중으로 다시 맞추는 일입니다. 같은 금액을 추가 매수하는 것과는 다릅니다. 언제 맞출지도 규칙에 적어야 합니다.')+
+ lab('balance','처음 정한 비중으로 다시 맞추기',range('balance-return','매수 후 자산 가격 변화',-50,100,50,5,'%')+enrichActions('<button type="button" id="balance-toggle" aria-pressed="false">비중 다시 맞추기</button>'),'100만 원 중 주식 50만 원, 현금 50만 원으로 시작하는 한 장면입니다. 현금 수익률과 거래 비용은 0, 소수 수량 매매가 가능하다고 가정합니다. 가격 변화를 바꾸면 조정 전으로 돌아갑니다. 조정 자체는 이 가정의 총평가액을 늘리지 않습니다.')+
+ `<p class="caption">리밸런싱은 비중 관리입니다. 수익을 보장하지 않으며 실제 거래에는 비용·세금이 생길 수 있습니다.</p>`+
+ enrichSource('https://www.investor.gov/introduction-investing/investing-basics/glossary/rebalancing','Investor.gov · 리밸런싱');
+const enrichSizingInit=inits.sizing;
+inits.sizing=()=>{
+ enrichSizingInit();
+ bind(['size-fund','budget-weight','budget-stop','budget-slip'],()=>{
+  const fund=val('size-fund'),invested=fund*val('budget-weight')/100,planned=invested*val('budget-stop')/100,actual=invested*(val('budget-stop')+val('budget-slip'))/100;
+  const amount=v=>num(v,2)+'만 원';
+  put('budget',`<div class="budget-bars"><div><span>투입금</span><i style="width:${invested/fund*100}%"></i><b>${amount(invested)}</b></div><div><span>계획한 손실</span><i style="width:${planned/fund*100}%"></i><b>${amount(planned)}</b></div><div><span>가정한 실제 손실</span><i style="width:${actual/fund*100}%"></i><b>${amount(actual)}</b></div></div>`+metrics(metric('함께 쓰는 계좌 금액',amount(fund)),metric('계획 손실 · 계좌 대비',num(planned/fund*100)+'%'),metric('가정 실제 손실 · 계좌 대비',num(actual/fund*100)+'%'))+`<div class="result">${invested===0?'비중이 0이라 이 거래의 투입금과 손실도 0입니다.':actual>planned?'청산 기준을 정했어도 더 낮게 팔리면 계획보다 손실이 커집니다.':'투입금 전체가 계획한 손실은 아닙니다. 다만 정한 가격에 팔린다는 가정이 깨지면 손실도 달라집니다.'}</div>`);
+ });
+ let balanced=false;
+ function showBalance(){
+  const stock=50*(1+val('balance-return')/100),total=stock+50,s=balanced?total/2:stock,c=balanced?total/2:50,weight=s/total*100,trade=stock-total/2;
+  $('#balance-toggle').textContent=balanced?'조정 전으로 보기':'비중 다시 맞추기';$('#balance-toggle').setAttribute('aria-pressed',String(balanced));
+  put('balance',`<div class="enrich-state"><span>${balanced?'비중을 다시 맞춘 뒤':'가격 변화 후 · 조정 전'}</span><b>목표 · 주식 50% / 현금 50%</b></div><div class="balance-bar"><span style="width:${weight}%">주식 ${num(weight,1)}%</span><span style="width:${100-weight}%">현금 ${num(100-weight,1)}%</span></div>`+metrics(metric('주식 평가액',num(s)+'만 원'),metric('현금',num(c)+'만 원'),metric('총평가액',num(total)+'만 원'))+`<div class="result">${balanced?(Math.abs(trade)<1e-9?'이미 목표 비중이어서 거래가 필요하지 않습니다.':`주식을 ${num(Math.abs(trade))}만 원 ${trade>0?'팔아 현금으로 옮겼습니다':'매수해 비중을 늘렸습니다'}. 총평가액은 조정 전과 같습니다.`):'가격이 움직이면 주식과 현금의 비중도 달라집니다. 버튼을 눌러 목표 비중으로 돌아가 보세요.'}</div>`);
+ }
+ bind(['balance-return'],()=>{balanced=false;showBalance()});$('#balance-toggle').onclick=()=>{balanced=!balanced;showBalance()};
+};
+const enrichDiscipline=pages.discipline;
+pages.discipline=()=>enrichBefore(enrichDiscipline(),'<section class="lab" id="mind">',
+ section('한 번의 손절과 계좌 전체의 점검','한 번의 손실을 작게 제한해도 손실이 계속 반복되면 계좌는 줄어듭니다. 개별 거래의 청산 규칙과 별개로, 계좌 전체를 언제 점검하고 새 매수를 잠시 멈출지도 미리 적어 둡니다. 급한 마음으로 기준을 바꾸는 것과 사전에 정한 점검은 다릅니다.')+
+ lab('checkpoint','작은 손실이 반복되면?',range('check-limit','시작 계좌 대비 점검 기준',2,20,8,1,'%')+enrichActions('<button type="button" id="check-next">다음 손실 보기</button><button type="button" id="check-reset">처음부터</button>'),'시작 계좌 100에서 매 장면마다 직전 계좌의 2% 손실이 확정되는 가상 예시입니다. 점검 기준을 넘긴 장면부터 새 거래를 쉬는 것으로 단순화했습니다. 보유 자산·비용·입출금은 없습니다. 이미 가진 자산은 새 매수를 쉬어도 더 하락할 수 있습니다. 실제 매매법의 성과 계산이 아닙니다.')+
+ `<p class="caption">점검은 손실을 되돌리지 않습니다. 기준을 넘기기 전에 정확히 멈춘다는 보장도 없습니다. 쉬는 동안 반등을 놓칠 수 있으므로 재개 기준도 함께 정해 둡니다.</p>`+
+ `<section class="enrich-review"><h3>잠깐 멈췄다면 무엇을 확인할까요?</h3><p>규칙을 어겼는지, 주문·가격 정보에 문제가 있었는지, 시장 환경이 달라졌는지부터 확인합니다. 손실이 났다는 사실만으로 전략이 틀렸다고 단정하지도, 원칙을 지켰다는 이유만으로 계속하지도 않습니다.</p><label for="review-pause">내가 점검할 상황<textarea id="review-pause" rows="2" placeholder="예: 계좌 손실이 미리 정한 기준에 닿으면 새 매수 전에 거래 기록을 확인한다."></textarea></label><label for="review-resume">다시 시작하기 전에 확인할 것<textarea id="review-resume" rows="2" placeholder="예: 오류 원인과 내 규칙의 한도를 다시 확인하고 재개 여부를 판단한다."></textarea></label><p id="review-save-status" class="caption" role="status">이 브라우저에만 저장됩니다.</p></section>`);
+const enrichDisciplineInit=inits.discipline;
+inits.discipline=()=>{
+ enrichDisciplineInit();let step=0,paused=false;
+ function drawCheck(){
+  const values=Array.from({length:step+1},(_,i)=>100*.98**i),equity=values.at(-1),loss=100-equity,limit=val('check-limit');paused=loss>=limit-1e-9;
+  put('checkpoint',chart([{name:'가상 계좌',values,color:'var(--blue)',dots:true},{name:'내 점검 기준',values:Array(step+1).fill(100-limit),color:'var(--accent)',dash:true}],{min:80,max:102,labels:['시작',...Array.from({length:8},(_,i)=>(i+1)+'회')],title:'반복 손실과 계좌 점검 기준'})+metrics(metric('확정 손실 장면',step+'회'),metric('시작 대비 계좌 손실',num(loss)+'%'),metric('현재 계좌',num(equity)))+`<div class="result">${paused?'점검 기준에 닿거나 넘어섰습니다. 이 체험은 여기서 새 거래를 쉽니다. 이미 생긴 손실은 남습니다.':step===8?'준비한 장면을 모두 봤습니다. 지금까지 기준에 닿지 않았다는 것이 안전을 보장하지는 않습니다.':'한 번의 손실은 작아도 여러 번 이어지면 계좌에 쌓입니다. 다음 장면을 보고 미리 정한 기준과 비교해 보세요.'}</div>`);
+  $('#check-next').disabled=paused||step>=8;
+ }
+ const reset=()=>{step=0;paused=false;drawCheck()};bind(['check-limit'],reset);$('#check-next').onclick=()=>{if(!paused&&step<8){step++;drawCheck()}};$('#check-reset').onclick=reset;
+ for(const id of ['review-pause','review-resume']){const el=$('#'+id);try{el.value=localStorage.getItem('dp-'+id)||''}catch{}el.oninput=()=>{try{localStorage.setItem('dp-'+id,el.value);$('#review-save-status').textContent='이 브라우저에 저장했어요.'}catch{$('#review-save-status').textContent='현재 브라우저에서는 저장할 수 없습니다.'}}}
+};
+const enrichGlossary=pages.glossary;
+pages.glossary=()=>enrichGlossary()+`<details class="enrich-references"><summary>이번 보강 내용의 참고 자료</summary><p>systrader79의 글에서 캔들·고정 비율·계좌 전체 점검·회복 시간의 학습 소재를 참고했습니다. 설명과 체험은 이 책의 흐름에 맞춰 새로 구성했습니다.</p><ul><li><a href="https://stock79.tistory.com/entry/주가-움직임의-핵심-원리-지지와-저항-11" target="_blank" rel="noopener">캔들에 담긴 가격 정보</a></li><li><a href="https://stock79.tistory.com/entry/변동성-조절-전략-1-고정-비율-투자-전략-15" target="_blank" rel="noopener">고정 비율 투자와 리밸런싱</a></li><li><a href="https://stock79.tistory.com/entry/시스템-손절매-기법-35" target="_blank" rel="noopener">개별 거래와 계좌 전체의 손실 관리</a></li><li><a href="https://stock79.tistory.com/entry/장기-투자에서-성공하기-위한-핵심-원칙-2-31" target="_blank" rel="noopener">장기 결과와 중간 경험의 차이</a></li><li><a href="https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders" target="_blank" rel="noopener">Investor.gov · 주문 가격과 체결 가격</a></li></ul></details>`;
+termData.push(['캔들 몸통·꼬리','몸통은 시가와 종가 사이, 꼬리는 고가·저가까지의 범위. 장중에는 종가 대신 현재가로 그립니다.'],['계획한 손실','정해 둔 청산 가격에 체결된다고 가정한 손실 금액. 실제 손실의 상한을 보장하지 않습니다.'],['리밸런싱','가격 변화 등으로 달라진 자산 비중을 목표 비중으로 다시 맞추는 일.'],['회복 시간','이전 고점을 기록한 시점부터 그 고점 이상으로 돌아온 시점까지의 시간.'],['계좌 점검 기준','누적 손실·정보 오류 등 미리 정한 상황에서 전체 운영을 점검하는 조건. 개별 거래의 청산 조건과 구분합니다.']);
 render();
 </script></body></html>
